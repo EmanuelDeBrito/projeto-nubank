@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@expo/metro-config": "~54.0.14",
+    "@expo/vector-icons": "^15.0.3",
     "babel-preset-expo": "~54.0.10",
     "expo": "~54.0.33",
     "expo-constants": "~18.0.13",
