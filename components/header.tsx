@@ -1,10 +1,18 @@
 import { SafeAreaView, View, Text } from "react-native"
 import { HeaderIcon } from "./header-icon"
+import React from "react"
 
-export const Header = () => {
+type Props = {
+    balanceShown: boolean,
+    setBalanceShown: React.Dispatch<React.SetStateAction<boolean>>,
+}
+
+export const Header = ({ balanceShown, setBalanceShown }: Props) => {
     const handleProfile = () => { }
 
-    const handleEye = () => { }
+    const handleShownBalance = () => { 
+        setBalanceShown(!balanceShown)
+    }
 
     const handleQuestion = () => { }
 
@@ -25,12 +33,22 @@ export const Header = () => {
                     </View>
 
                     <View className="flex flex-row items-center gap-6">
-                        <HeaderIcon 
-                            name="eye-outline"
-                            color="#FFF"
-                            size={28}
-                            onPress={handleEye}
-                        />
+                        {balanceShown &&
+                            <HeaderIcon 
+                                name="eye-outline"
+                                color="#FFF"
+                                size={28}
+                                onPress={handleShownBalance}
+                            />
+                        }
+                        {!balanceShown &&
+                            <HeaderIcon 
+                                name="eye-off-outline"
+                                color="#FFF"
+                                size={28}
+                                onPress={handleShownBalance}
+                            />
+                        }
                         <HeaderIcon 
                             name="help-circle-outline"
                             color="#FFF"

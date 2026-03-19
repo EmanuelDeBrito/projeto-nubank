@@ -15,14 +15,14 @@ export const InfoButton = ({ title, children, onPress }: Props) => {
             onPress={onPress}
         >
             <View className="flex flex-row justify-between items-center">
-                <Text className="text-xl font-semibold">{title}</Text>
+                <Text className="text-2xl font-semibold">{title}</Text>
                 <Ionicons 
                     name="arrow-forward"
                     color="#555"
-                    size={18}
+                    size={20}
                 />
             </View>
-            <View className="mt-6">
+            <View className="mt-4">
                 {children}
             </View>
         </Pressable>
