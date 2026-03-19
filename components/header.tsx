@@ -20,7 +20,7 @@ export const Header = ({ balanceShown, setBalanceShown }: Props) => {
 
     return(
         <SafeAreaView>
-            <View className="py-11 px-8 bg-nubank">
+            <View className="py-11 px-6 bg-nubank">
                 <View className="flex flex-row justify-between items-center">
                     <View>
                         <HeaderIcon 

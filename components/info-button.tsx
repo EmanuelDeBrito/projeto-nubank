@@ -11,7 +11,7 @@ type Props = {
 export const InfoButton = ({ title, children, onPress }: Props) => {
     return(
         <Pressable
-            className="py-10 px-8"
+            className="py-10 px-6"
             onPress={onPress}
         >
             <View className="flex flex-row justify-between items-center">
