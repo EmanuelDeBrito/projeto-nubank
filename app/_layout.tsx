@@ -3,7 +3,7 @@ import "../global.css"
 
 const RootLayout = () => {
     return(
-        <Stack>
+        <Stack screenOptions={{ headerShown: false }}>
             <Stack.Screen name="index" />
         </Stack>
     )
