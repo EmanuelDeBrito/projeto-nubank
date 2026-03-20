@@ -11,7 +11,7 @@ type Props = {
 export const InfoButton = ({ title, children, onPress }: Props) => {
     return(
         <Pressable
-            className="py-10 px-6"
+            className="py-8 px-6"
             onPress={onPress}
         >
             <View className="flex flex-row justify-between items-center">
@@ -19,10 +19,10 @@ export const InfoButton = ({ title, children, onPress }: Props) => {
                 <Ionicons 
                     name="arrow-forward"
                     color="#555"
-                    size={20}
+                    size={24}
                 />
             </View>
-            <View className="mt-4">
+            <View className="mt-2">
                 {children}
             </View>
         </Pressable>

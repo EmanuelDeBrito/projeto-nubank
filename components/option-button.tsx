@@ -12,16 +12,22 @@ type Props = {
 export const OptionButton = ({ label, iconName, badge, onPress }: Props) => {
     return(
         <Pressable 
-        className="items-center mr-1"
-        onPress={onPress}>
+            className="items-center mr-1"
+            onPress={onPress}
+        >
             <View className="justify-center items-center p-8 bg-[#DDD] rounded-full">
                 <Ionicons 
                     name={iconName}
                     color="#000"
-                    size={27}
+                    size={28}
                 />
             </View>
-            <Text className="w-[90px] mt-3 text-lg font-semibold text-center">{label}</Text>
+            {badge &&
+                <View className="justify-center items-center h-6 px-1 -mt-6 bg-nubank rounded">
+                    <Text className="text-white text-lgg font-semibold">{badge}</Text>
+                </View>
+            }
+            <Text className="w-[90px] mt-2 text-lg font-semibold text-center">{label}</Text>
         </Pressable>
     )
 }

@@ -8,15 +8,10 @@ type Props = {
 }
 
 export const Header = ({ balanceShown, setBalanceShown }: Props) => {
-    const handleProfile = () => { }
-
+    
     const handleShownBalance = () => { 
         setBalanceShown(!balanceShown)
     }
-
-    const handleQuestion = () => { }
-
-    const handleMessage = () => { }
 
     return(
         <SafeAreaView>
@@ -28,7 +23,7 @@ export const Header = ({ balanceShown, setBalanceShown }: Props) => {
                             color="#FFF"
                             size={24}
                             background
-                            onPress={handleProfile}
+                            onPress={() => {}}
                         />
                     </View>
 
@@ -53,13 +48,13 @@ export const Header = ({ balanceShown, setBalanceShown }: Props) => {
                             name="help-circle-outline"
                             color="#FFF"
                             size={28}
-                            onPress={handleQuestion}
+                            onPress={() => {}}
                         />
                         <HeaderIcon 
                             name="mail-unread-outline"
                             color="#FFF"
                             size={28}
-                            onPress={handleMessage}
+                            onPress={() => {}}
                         />
                     </View>
                 </View>
