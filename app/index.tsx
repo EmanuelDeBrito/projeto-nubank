@@ -3,8 +3,9 @@ import { Header } from "../components/header"
 import { InfoButton } from "../components/info-button"
 import { PriceText } from "../components/price-text"
 import { OptionButton } from "../components/option-button"
+import { CustomCotainer } from "../components/custom-container"
 import { useState } from "react"
-
+import { InfoItem } from "../components/info-item"
 const Screen = () => {
     const [balance, setBalance] = useState<number | string>(1200)
     const [balanceShown, setBalanceShown] = useState(true)
@@ -61,7 +62,16 @@ const Screen = () => {
                     onPress={() => { }}
                 />
             </ScrollView>
-
+            <CustomCotainer
+                onPress={() => {}}
+            >
+                <InfoItem
+                    label="Meus cartões"
+                    iconName="albums-outline"
+                    iconColor="#000"
+                    iconSize={26}
+                />
+            </CustomCotainer>
         </ScrollView>
     )
 }
