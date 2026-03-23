@@ -22,7 +22,7 @@ export const InfoButton = ({ title, children, onPress }: Props) => {
                     size={24}
                 />
             </View>
-            <View className="mt-2">
+            <View className="mt-3">
                 {children}
             </View>
         </Pressable>

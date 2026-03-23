@@ -6,6 +6,7 @@ import { OptionButton } from "../components/option-button"
 import { CustomCotainer } from "../components/custom-container"
 import { InfoItem } from "../components/info-item"
 import { Description } from "../components/description"
+import { OpacityText } from "../components/opacity-text"
 import { useState } from "react"
 
 const Screen = () => {
@@ -122,6 +123,16 @@ const Screen = () => {
                     </CustomCotainer>
                 </View>
             </ScrollView>
+            <InfoButton
+                title="Cartão de Crédito"
+                onPress={() => {}}
+            >
+                <View className="gap-1">
+                    <OpacityText label="Fatura Atual" />
+                    <PriceText label={1000} />
+                    <OpacityText label="Limite Disponível: R$ 5.000,00" />
+                </View>
+            </InfoButton>
         </ScrollView>
     )
 }
