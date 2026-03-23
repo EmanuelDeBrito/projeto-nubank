@@ -1,4 +1,4 @@
-import { ScrollView, View } from "react-native"
+import { StatusBar, SafeAreaView, ScrollView, View } from "react-native"
 import { Header } from "../components/header"
 import { InfoButton } from "../components/info-button"
 import { PriceText } from "../components/price-text"
@@ -7,14 +7,24 @@ import { CustomCotainer } from "../components/custom-container"
 import { InfoItem } from "../components/info-item"
 import { Description } from "../components/description"
 import { OpacityText } from "../components/opacity-text"
+import { Line } from "../components/line"
 import { useState } from "react"
 
 const Screen = () => {
     const [balance, setBalance] = useState<number | string>(1200)
     const [balanceShown, setBalanceShown] = useState(true)
 
+    console.log(StatusBar.currentHeight)
+
     return(
-        <ScrollView className="h-screen">
+        <>
+            <SafeAreaView style={{ flex: 0, backgroundColor: "#820ad1" }} /> 
+
+            <ScrollView className="h-screen">
+            <StatusBar 
+                barStyle={"light-content"}
+                backgroundColor={"#820ad1"}    
+            />
             <Header
                 balanceShown={balanceShown}
                 setBalanceShown={setBalanceShown}
@@ -123,6 +133,7 @@ const Screen = () => {
                     </CustomCotainer>
                 </View>
             </ScrollView>
+            <Line />
             <InfoButton
                 title="Cartão de Crédito"
                 onPress={() => {}}
@@ -134,6 +145,8 @@ const Screen = () => {
                 </View>
             </InfoButton>
         </ScrollView>
+        </>
+        
     )
 }
 
