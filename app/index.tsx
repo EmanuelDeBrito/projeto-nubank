@@ -1,11 +1,13 @@
-import { ScrollView } from "react-native"
+import { ScrollView, View } from "react-native"
 import { Header } from "../components/header"
 import { InfoButton } from "../components/info-button"
 import { PriceText } from "../components/price-text"
 import { OptionButton } from "../components/option-button"
 import { CustomCotainer } from "../components/custom-container"
-import { useState } from "react"
 import { InfoItem } from "../components/info-item"
+import { Description } from "../components/description"
+import { useState } from "react"
+
 const Screen = () => {
     const [balance, setBalance] = useState<number | string>(1200)
     const [balanceShown, setBalanceShown] = useState(true)
@@ -72,6 +74,54 @@ const Screen = () => {
                     iconSize={26}
                 />
             </CustomCotainer>
+            <ScrollView
+                className="pl-6"
+                showsHorizontalScrollIndicator={false}
+                horizontal
+            >
+                <View className="w-96 mr-4">
+                    <CustomCotainer 
+                        big
+                        onPress={() => {}}
+                    >
+                        <View className="flex flex-row flex-wrap gap-x-1">
+                            <Description 
+                                label="Você tem"
+                                normal
+                            />
+                            <Description 
+                                label="R$ 12.000,00"
+                                bold
+                            />
+                            <Description 
+                                label="disponíveis para empréstimo."
+                                normal
+                            />
+                        </View>
+                    </CustomCotainer>
+                </View>
+                <View className="w-96">
+                    <CustomCotainer 
+                        big
+                        onPress={() => {}}
+                    >
+                        <View className="flex flex-row flex-wrap gap-x-1">
+                            <Description 
+                                label="Guarde dinheiro"
+                                purple
+                            />
+                            <Description 
+                                label="no cofrinho"
+                                normal
+                            />
+                            <Description 
+                                label="Toque aqui para guardar."
+                                normal
+                            />
+                        </View>
+                    </CustomCotainer>
+                </View>
+            </ScrollView>
         </ScrollView>
     )
 }
